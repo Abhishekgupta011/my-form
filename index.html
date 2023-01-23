@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+   
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home page</title>
+    </head>
+    <body>
+        <h1 style="text-align:center;color: orange;">Book a call</h1>
+        <h5 style="text-align:center">Book a call slot and our representative will call within 1hr of selected time</h5>
+        <hr>
+        <form action="#" onsubmit="form()">
+            <label for="fullname">NAME:</label><br>
+            <input type="text" id="fullname"  placeholder="Full name" required><br><br>
+            <label for="email">EMAIL:</label><br>
+            <input type="email" id="email" required><br><br>
+            <label for="number">PHONE:</label><br>
+            <input type="text" id="number" placeholder="1234567890" required><br><br>
+            <label for="filldate">TIME FOR CALL</label><br>
+            <input type="date" id="filldate" required> <input type="time">
+            <br><br>
+            <input type="submit" value="Get a call">
+        </form>
+        <script>
+            function form() {
+            const name = document.getElementById('fullname').value;
+            const mail = document.getElementById('email').value;
+            const phone = document.getElementById('number').value;
+            const date = document.getElementById('filldate').value;
+            console.log(fullname);
+            console.log(email);
+            console.log(number);
+            console.log(filldate);
+        }
+        </script>
+    </body>
+</html>
