@@ -45,6 +45,7 @@
         </div>
         <input type="submit" class="button" value="submit">
     </form> 
+    <ol class="listitems"></ol>
     <script>
         const newForm = document.querySelector('#my-form')
         const nameInput = document.querySelector('#name').value
@@ -64,12 +65,20 @@
                     name : values,
                     email : emailvalue
                 }
-                localStorage.setItem('UserDetails',JSON.stringify(object))
+                localStorage.setItem('UserDetails',JSON.stringify(object));
+                showregisterUser(object);
             }
             else{
                 console.log("success")
             }
         }
+        function showregisterUser(obj){
+            const parent = document.querySelector('.listitems');
+            const child = document.createElement('li')
+            child.textContent = obj.name + " " + obj.email
+            parent.appendChild(child)
+        }
+
     </script>
 </body>
 </html>
