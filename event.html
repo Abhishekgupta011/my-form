@@ -61,10 +61,11 @@
                 setTimeout(()=> msg.remove(), 3000)
                 const values = e.target.username.value
                 const emailvalue = e.target.Email.value
-                const object = {
+                var object =[];
+                object.push( {
                     name : values,
                     email : emailvalue
-                }
+                })
                 localStorage.setItem('UserDetails',JSON.stringify(object));
                 showregisterUser(object);
             }
@@ -72,12 +73,13 @@
                 console.log("success")
             }
         }
-        function showregisterUser(obj){
+        function showregisterUser(object){
             const parent = document.querySelector('.listitems');
             const child = document.createElement('li')
-            child.textContent = obj.name + " " + obj.email
+            child.textContent = object.name + " " + object.email
             parent.appendChild(child)
         }
+        
 
     </script>
 </body>
