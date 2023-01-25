@@ -60,8 +60,11 @@
                 setTimeout(()=> msg.remove(), 3000)
                 const values = e.target.username.value
                 const emailvalue = e.target.Email.value
-                localStorage.setItem('name',values)
-                localStorage.setItem('email', emailvalue)
+                const object = {
+                    name : values,
+                    email : emailvalue
+                }
+                localStorage.setItem('UserDetails',JSON.stringify(object))
             }
             else{
                 console.log("success")
