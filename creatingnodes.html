@@ -43,6 +43,7 @@
            console.log(itemlist.nextSibling)// return text as a new line or white space
            console.log(itemlist.nextElementSibling)// return null because there is no siblings of ul
            console.log(itemlist.previousSibling)// return as a text
+           console.log(itemlist.firstElementChild)// return firstelement child of ul element
            // adding hello word before item 1 
            const newitem = document.createElement('li')// creating <li> element
            newitem.className='list-group-item'// creating class for li
@@ -63,7 +64,6 @@
            const h1=document.querySelector('header h1')
            newer.insertBefore(newDiv, h1)
 
-           document.firstElementChild
            
    </script>
 </body>
